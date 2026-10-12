@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Session7_Part2
 {
-    internal class Point3D : IComparable
+    internal class Point3D : IComparable,ICloneable
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -38,6 +38,10 @@ namespace Session7_Part2
                 result = Y.CompareTo(p.Y);
 
             return result;
+        }
+        public object Clone()
+        {
+            return new Point3D(X, Y, Z);
         }
 
 
