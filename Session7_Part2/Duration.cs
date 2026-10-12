@@ -16,5 +16,26 @@ namespace Session7_Part2
             Minutes = minutes;
             Seconds = seconds;
         }
+
+
+        public override string ToString()
+        {
+            return $"Hours: {Hours}, Minutes: {Minutes}, Seconds: {Seconds}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj is Duration d)
+                return Hours == d.Hours &&
+                       Minutes == d.Minutes &&
+                       Seconds == d.Seconds;
+
+            return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(Hours, Minutes, Seconds);
+        }
     }
 }

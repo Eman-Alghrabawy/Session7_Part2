@@ -88,7 +88,12 @@
             #endregion
 
             #region ThirdProject
-           
+            Duration d1 = new Duration(1, 30, 45);
+            Duration d2 = new Duration(1, 30, 45);
+
+            Console.WriteLine(d1);
+            Console.WriteLine(d1.Equals(d2));
+            Console.WriteLine(d1.GetHashCode());
 
             #endregion
 
