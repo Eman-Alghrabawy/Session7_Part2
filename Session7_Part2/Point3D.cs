@@ -27,5 +27,11 @@ namespace Session7_Part2
             Y = y;
             Z = z;
         }
+
+
+        public override string ToString()
+        {
+            return $"Point Coordinates: ({X}, {Y}, {Z})";
+        }
     }
 }
