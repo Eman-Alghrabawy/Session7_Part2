@@ -48,6 +48,23 @@
             //else
             //    Console.WriteLine("Not Equal");
             //No, P1 == P2 does not compare coordinates by default.It compares object references. To compare the coordinates, we need to overload the == operator in the Point3D class.
+
+            Point3D[] points =
+{
+    new Point3D(3, 2, 1),
+    new Point3D(1, 5, 2),
+    new Point3D(1, 2, 3),
+    new Point3D(2, 4, 1)
+};
+
+            Array.Sort(points);
+
+            foreach (Point3D p in points)
+            {
+                Console.WriteLine(p);
+            }
+
+        
         }
     }
 }

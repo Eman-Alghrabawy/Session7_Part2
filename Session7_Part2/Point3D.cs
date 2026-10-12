@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Session7_Part2
 {
-    internal class Point3D
+    internal class Point3D : IComparable
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -26,6 +26,18 @@ namespace Session7_Part2
             X = x;
             Y = y;
             Z = z;
+        }
+
+        public int CompareTo(object obj)
+        {
+            Point3D p = (Point3D)obj;
+
+            int result = X.CompareTo(p.X);
+
+            if (result == 0)
+                result = Y.CompareTo(p.Y);
+
+            return result;
         }
 
 
