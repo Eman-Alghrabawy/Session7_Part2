@@ -10,19 +10,23 @@ namespace Session7_Part2
         public int Minutes { get; set; }
         public int Seconds { get; set; }
 
-        public Duration(int hours, int minutes, int seconds)
-        {
-            Hours = hours;
-            Minutes = minutes;
-            Seconds = seconds;
-        }
 
+
+        //public override string ToString()
+        //{
+        //    return $"Hours: {Hours}, Minutes: {Minutes}, Seconds: {Seconds}";
+        //}
 
         public override string ToString()
         {
-            return $"Hours: {Hours}, Minutes: {Minutes}, Seconds: {Seconds}";
-        }
+            if (Hours > 0)
+                return $"Hours: {Hours}, Minutes :{Minutes}, Seconds :{Seconds}";
 
+            if (Minutes > 0)
+                return $"Minutes :{Minutes}, Seconds :{Seconds}";
+
+            return $"Seconds :{Seconds}";
+        }
         public override bool Equals(object obj)
         {
             if (obj is Duration d)
@@ -36,6 +40,19 @@ namespace Session7_Part2
         public override int GetHashCode()
         {
             return HashCode.Combine(Hours, Minutes, Seconds);
+        }
+        public Duration(int hours, int minutes, int seconds)
+        {
+            Hours = hours;
+            Minutes = minutes;
+            Seconds = seconds;
+        }
+
+        public Duration(int totalSeconds)
+        {
+            Hours = totalSeconds / 3600;
+            Minutes = (totalSeconds % 3600) / 60;
+            Seconds = totalSeconds % 60;
         }
     }
 }

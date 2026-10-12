@@ -88,12 +88,23 @@
             #endregion
 
             #region ThirdProject
-            Duration d1 = new Duration(1, 30, 45);
-            Duration d2 = new Duration(1, 30, 45);
+            //Duration d1 = new Duration(1, 30, 45);
+            //Duration d2 = new Duration(1, 30, 45);
 
-            Console.WriteLine(d1);
-            Console.WriteLine(d1.Equals(d2));
-            Console.WriteLine(d1.GetHashCode());
+            //Console.WriteLine(d1);
+            //Console.WriteLine(d1.Equals(d2));
+            //Console.WriteLine(d1.GetHashCode());
+            Duration D1 = new Duration(1, 10, 15);
+            Console.WriteLine(D1.ToString());
+
+            Duration D2 = new Duration(3600);
+            Console.WriteLine(D2.ToString());
+
+            Duration D3 = new Duration(7800);
+            Console.WriteLine(D3.ToString());
+
+            Duration D4 = new Duration(666);
+            Console.WriteLine(D4.ToString());
 
             #endregion
 
