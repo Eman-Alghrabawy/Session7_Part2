@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+            #region Firstproject
             //Point3D P = new Point3D(10, 10, 10);
 
             //Console.WriteLine(P.ToString());
@@ -64,12 +65,22 @@
             //                Console.WriteLine(p);
             //            }
 
-            Point3D P1 = new Point3D(10, 20, 30);
+            //Point3D P1 = new Point3D(10, 20, 30);
 
-            Point3D P2 = (Point3D)P1.Clone();
+            //Point3D P2 = (Point3D)P1.Clone();
 
-            Console.WriteLine(P1);
-            Console.WriteLine(P2);
+            //Console.WriteLine(P1);
+            //Console.WriteLine(P2);
+            #endregion
+            #region SecProject
+            Maths math = new Maths();
+
+            Console.WriteLine(math.Add(10, 5));
+            Console.WriteLine(math.Subtract(10, 5));
+            Console.WriteLine(math.Multiply(10, 5));
+            Console.WriteLine(math.Divide(10, 5));
+
+            #endregion
         }
     }
 }
